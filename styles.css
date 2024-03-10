@@ -8,7 +8,6 @@ body, html {
   
   .progress-container {
     height: 35px;
-    background-color: #f0f0f0;
     position: relative; /* Додано позиціонування для вирівнювання тексту */
     
   }
@@ -47,10 +46,8 @@ body, html {
 
   .bottom-center {
     position: fixed; /* Або absolute, залежно від вашого випадку */
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f0f0f0;
     padding: 10px;
     width: 95%;
     border: 1px solid #ccc;
