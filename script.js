@@ -42,6 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
     });
+
+    tg.onEvent('mainButtonClicked', function(){
+        alert("continue");
+        tg.sendData("some string that we need to send"); 
+    });
+
+    Telegram.WebApp.onEvent('mainButtonClicked', function(){
+        alert("continue2");
+        tg.sendData("some string that we need to send"); 
+        //при клике на основную кнопку отправляем данные в строковом виде
+    });
+    
   }
   
   
