@@ -30,12 +30,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     const myButton = document.getElementById('complete-button');
-  
+    let tg = window.Telegram.WebApp;
+    tg.MainButton.show();
     // Додаємо обробник подій для кліку на кнопку
     myButton.addEventListener('click', function() {
-        alert("send audio");
-        let tg = window.Telegram.WebApp;
-        tg.sendData("send_audio");
+        alert("send audio1");
+        try{
+            tg.sendData("send_audio");
+        } catch(e){
+            alert(e);
+        }
+        
     });
   }
   
