@@ -31,27 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const myButton = document.getElementById('complete-button');
     let tg = window.Telegram.WebApp;
-    tg.MainButton.show();
     // Додаємо обробник подій для кліку на кнопку
     myButton.addEventListener('click', function() {
-        alert("send audio1");
-        try{
-            tg.sendData("send_audio");
-        } catch(e){
-            alert(e);
-        }
-        
-    });
-
-    tg.onEvent('mainButtonClicked', function(){
-        alert("continue");
-        tg.sendData("some string that we need to send"); 
-    });
-
-    Telegram.WebApp.onEvent('mainButtonClicked', function(){
-        alert("continue2");
-        tg.sendData("some string that we need to send"); 
-        //при клике на основную кнопку отправляем данные в строковом виде
+        tg.sendData(tg.initData);
     });
     
   }
