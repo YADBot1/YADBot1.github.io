@@ -33,7 +33,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let tg = window.Telegram.WebApp;
     // Додаємо обробник подій для кліку на кнопку
     myButton.addEventListener('click', function() {
-        tg.sendData(tg.initData);
+        try{
+            tg.sendData(tg.initData);
+        } catch(e){
+            alert(e);
+        }
+        
     });
     
   }
