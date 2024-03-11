@@ -27,5 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Почати анімацію
     animate();
-  });
+
+
+    const myButton = document.getElementById('complete-button');
+  
+    // Додаємо обробник подій для кліку на кнопку
+    myButton.addEventListener('click', function() {
+        alert("send audio");
+        let tg = window.Telegram.WebApp;
+        tg.sendData("send_audio");
+    });
+  }
+  
+  
+  
+  );
   
