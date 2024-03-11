@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    var queryString = window.location.search;
+
+    // Создаем новый объект URLSearchParams, передавая в него строку запроса
+    var searchParams = new URLSearchParams(queryString);
+
+        // Получаем значение параметра 'param1'
+    var param1Value = searchParams.get('req');
+
+
     const progressBar = document.getElementById('progress-bar');
     const progressText = document.getElementById('progress-text');
     const completeButton = document.getElementById('complete-button');
@@ -10,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     let progressWidth = 0; // Початкове значення ширини прогресу
-    const animationDuration = 10000; // Тривалість анімації у мілісекундах (10 секунд)
+    const animationDuration = 100000; // Тривалість анімації у мілісекундах (10 секунд)
   
     const animationStep = 100 / (animationDuration / 100); // Крок анімації для досягнення 100% за 10 секунд
   
@@ -26,7 +36,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     // Почати анімацію
-    animate();
+    if(param1Value){
+        const concontainer = document.getElementById('container');
+        concontainer.style.display = "none";
+        animate();
+    }
+    else{
+        const bottom_center = document.getElementById('bottom-center');
+        bottom_center.style.display = "none";
+        
+    }
+    
 
 
     const myButton = document.getElementById('complete-button');
@@ -34,13 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Додаємо обробник подій для кліку на кнопку
     myButton.addEventListener('click', function() {
         // Получаем строку запроса из текущего URL
-        var queryString = window.location.search;
-
-        // Создаем новый объект URLSearchParams, передавая в него строку запроса
-        var searchParams = new URLSearchParams(queryString);
-
-        // Получаем значение параметра 'param1'
-        var param1Value = searchParams.get('req');
+        
 
         try{
             tg.sendData(param1Value);
