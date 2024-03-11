@@ -33,8 +33,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let tg = window.Telegram.WebApp;
     // Додаємо обробник подій для кліку на кнопку
     myButton.addEventListener('click', function() {
+        // Получаем строку запроса из текущего URL
+        var queryString = window.location.search;
+
+        // Создаем новый объект URLSearchParams, передавая в него строку запроса
+        var searchParams = new URLSearchParams(queryString);
+
+        // Получаем значение параметра 'param1'
+        var param1Value = searchParams.get('req');
+
         try{
-            tg.sendData(tg.initData);
+            tg.sendData(param1Value);
         } catch(e){
             alert(e);
         }
