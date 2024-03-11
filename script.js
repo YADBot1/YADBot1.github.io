@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     let progressWidth = 0; // Початкове значення ширини прогресу
-    const animationDuration = 100000; // Тривалість анімації у мілісекундах (10 секунд)
+    const animationDuration = 10000; // Тривалість анімації у мілісекундах (10 секунд)
   
     const animationStep = 100 / (animationDuration / 100); // Крок анімації для досягнення 100% за 10 секунд
   
