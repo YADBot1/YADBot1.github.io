@@ -65,3 +65,11 @@ tr:last-child td { border-bottom: none; }
 .hover-preview { position: fixed; opacity: 0; visibility: hidden; pointer-events: none; z-index: 9999; border: 2px solid #555; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: #000; transition: opacity 0.3s ease, visibility 0.3s; }
 .hover-preview.visible { opacity: 1; visibility: visible; }
 .hover-preview img, .hover-preview video { max-width: 400px; max-height: 500px; display: none; object-fit: contain; }
+
+.subtitle {
+    color: #888;
+    margin-top: -15px; /* підтягуємо ближче до назви */
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-style: italic;
+}

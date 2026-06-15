@@ -59,7 +59,8 @@ const translations = {
         statusConnecting: "З'єднання з сервером...", statusActive: "Ключ активний. Можна працювати!",
         statusInvalid: "Помилка: Неправильний API ключ або немає з'єднання.", statusStopped: "Генерація зупинена.",
         statusStarted: "Генерація запущена...", statusPaused: "Помилка. Пауза 30с перед повтором...",
-        statusRestored: "Генерація відновлена...", statusFinished: "Генерація успішно завершена!", alertPaste: "Будь ласка, вставте ключ вручну."
+        statusRestored: "Генерація відновлена...", statusFinished: "Генерація успішно завершена!", alertPaste: "Будь ласка, вставте ключ вручну.",
+        subTitle: "Генеруй метаданні для стокових фото та відео за допомогою АІ без меж"
     },
     en: {
         mainTitle: "Stock Keymaster",
@@ -72,7 +73,8 @@ const translations = {
         statusConnecting: "Connecting to server...", statusActive: "Key is active. Ready to work!",
         statusInvalid: "Error: Invalid API key or connection failed.", statusStopped: "Generation stopped.",
         statusStarted: "Generation started...", statusPaused: "Error. Pausing 30s before retrying...",
-        statusRestored: "Generation restored...", statusFinished: "Generation successfully completed!", alertPaste: "Please paste the key manually."
+        statusRestored: "Generation restored...", statusFinished: "Generation successfully completed!", alertPaste: "Please paste the key manually.",
+        subTitle: "Generate metadata for stock photos and videos using AI without limits"
     }
 };
 
