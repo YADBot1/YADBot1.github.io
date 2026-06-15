@@ -1,20 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-     <link rel="stylesheet" href="styles.css">
-    <title>YAD</title>
+    <title>Stock Keymaster</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      
+    <div class="container">
+        <div class="header-row">
+            <h1 id="mainTitle">Stock Keymaster</h1>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="uk">УКР</button>
+                <button class="lang-btn" data-lang="en">ENG</button>
+            </div>
+        </div>
 
-    <script type='text/javascript' src='//pl22776109.profitablegatecpm.com/b7/0d/08/b70d08361322af5cd53545afa2781aa5.js'></script>
+        <div class="api-section">
+            <input id="apiKey" type="text" placeholder="Вставте Gemini API Key">
+            <button id="pasteBtn">Вставити</button>
+            <button id="connectBtn" class="hidden">Підключити</button>
+        </div>
+        <div id="apiStatus" class="api-status"></div>
+
+        <div id="welcomeScreen">
+            <h2 id="welcomeTitle">Для генерації використовується Google Gemini API</h2>
+            <p id="welcomeText">Щоб почати роботу необхідно отримати та вставити API ключ.</p>
+            <a class="google-btn" id="getKeyBtn" href="https://aistudio.google.com/app/apikey" target="_blank">
+                Отримати API ключ
+            </a>
+        </div>
+
+        <div class="folder-section hidden-locked" id="folderSection">
+            <label class="folder-btn">
+                <span id="folderBtnText">Вибрати папку</span>
+                <input type="file" id="folderInput" webkitdirectory directory multiple hidden>
+            </label>
+            <span id="folderName">Папка не вибрана</span>
+            
+            <select id="modelSelect" class="model-select">
+                <option value="" id="modelDefaultOpt">Завантаження моделей...</option>
+            </select>
+
+            <button id="startBtn" class="hidden">Почати генерацію</button>
+        </div>
+
+        <div id="progressWrapper" class="hidden">
+            <div class="progress-info">
+                <span id="progressText">0 / 0</span>
+                <span id="percentText">0%</span>
+            </div>
+            <div class="progress-bar-thin"><div id="progressFill"></div></div>
+        </div>
+
+        <div id="tableWrapper" class="hidden">
+            <table id="photoTable">
+                <thead>
+                    <tr>
+                        <th id="thMedia" style="width: 140px;">Медіа</th>
+                        <th id="thTitle" style="width: 25%;">Назва</th>
+                        <th id="thDesc" style="width: 30%;">Опис</th>
+                        <th id="thKeys" style="width: 85%;">Ключові слова</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
     
-      
-      <script src="script.js"></script>
-    
+    <div id="hoverPreview" class="hover-preview">
+        <img id="hoverImage" src="" alt="Preview">
+        <video id="hoverVideo" loop muted playsinline></video>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
